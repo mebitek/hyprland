@@ -1,0 +1,13 @@
+show=drun
+prompt=Apps
+normal_window=true
+layer=top
+term=kitty
+
+allow_markup=true
+allow_images=true
+iamge_size=24ù
+icon-theme: Dracula
+
+key_expand=Tab
+key_exit=Escape

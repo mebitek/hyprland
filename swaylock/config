@@ -1,0 +1,19 @@
+ignore-empty-password
+font="Noto Sans Regular"
+
+clock
+timestr=%R
+datestr=%a, %e of %B
+
+screenshot
+
+fade-in=0.5
+
+effect-blur=20x2
+#effect-greyscale
+effect-scale=0.3
+
+indicator
+indicator-radius=240
+indicator-thickness=20
+indicator-caps-lock
