@@ -1,2 +1,2 @@
 # hyprland
-Hyprland Dotfiles
+Endeavour OS Hyprland Dotfiles
