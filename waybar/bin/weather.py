@@ -3,6 +3,7 @@
 import json
 from urllib.request import urlopen
 from jproperties import Properties
+import argparse
 
 
 def degrees_to_cardinal(d):
@@ -27,9 +28,16 @@ weather_icons = {
     "default": "",
 }
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-c", "--config", type=str)
+
+args = parser.parse_args()
+config_file = args.config
+
+print(config_file)
 
 configs = Properties()
-with open('.env', 'rb') as config_file:
+with open(config_file, 'rb') as config_file:
     configs.load(config_file)
 
 api_key = configs.get("apiKey").data
@@ -81,7 +89,7 @@ wind_chill_text = f"Wind chill {wind_chill}°"
 #
 temp_min = json_data_forecast['calendarDayTemperatureMin'][0]
 temp_max = json_data_forecast['calendarDayTemperatureMax'][0]
-print(temp_min)
+# print(temp_min)
 
 temp_min_max = f"  {temp_min}°\t\t  {temp_max}°"
 # print(temp_min_max)
@@ -129,6 +137,6 @@ out_data = {
     "text": f"{icon} {temp}",
     "alt": status,
     "tooltip": tooltip_text,
-    "class": status_code,
+    "class": status_code.replace(" ", ""),
 }
 print(json.dumps(out_data))
