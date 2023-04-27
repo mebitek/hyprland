@@ -6,8 +6,9 @@ term=kitty
 
 allow_markup=true
 allow_images=true
-iamge_size=24ù
+image_size=48
 icon-theme: Dracula
+columns = 3
 
 key_expand=Tab
 key_exit=Escape
