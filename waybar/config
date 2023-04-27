@@ -129,7 +129,7 @@
 
     "custom/wofi": {
         "format": " <span rise='1000'>{icon}</span>",
-        "on-click": "wofi -show drun",
+        "on-click": "~/.config/rofi/bin/launcher",
         "format-icons": "",
         "tooltip": false
       },
