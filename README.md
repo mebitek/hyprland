@@ -7,3 +7,6 @@ Endeavour OS Hyprland Dotfiles
 
 ![Screenshot 2023-04-27-12-33-24](https://user-images.githubusercontent.com/1067967/234837514-e49e1274-3940-44c8-af09-8eb8a20b3b80.png)
 
+![Screenshot 2023-04-27-13-21-59](https://user-images.githubusercontent.com/1067967/234847789-5bb6cc8c-3df2-4d31-bb86-a31a984cd8be.png)
+
+
