@@ -134,7 +134,7 @@ tooltip_text = str.format(
 
 # print waybar module data
 out_data = {
-    "text": f"{icon} {temp}",
+    "text": f"<span rise='1000'>{icon}</span> {temp}",
     "alt": status,
     "tooltip": tooltip_text,
     "class": status_code.replace(" ", ""),
