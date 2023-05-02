@@ -156,7 +156,7 @@
       },
     "custom/updates": {
 		    "format": " <span rise='1000'>{icon}</span>",
-		    "format-icons": ["\uF1B2", "\uE79B"],
+		    "format-icons": ["\uF1B2", "\uF1B2"],
 		    "interval": 10,
 		    "return-type":"json",
 		    "exec": "~/.config/waybar/bin/updbar.sh",
