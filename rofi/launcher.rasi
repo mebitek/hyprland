@@ -3,7 +3,7 @@ configuration {
 	modi:                          "drun,run,filebrowser,window";
     show-icons:                  true;
     display-drun:                "";
-    display-drun:                " Apps";
+    display-drun:                "󰀻 Apps";
     display-run:                 " Run";
     display-filebrowser:         " Files";
     display-window:              " Windows";

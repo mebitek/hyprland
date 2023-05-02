@@ -149,7 +149,7 @@ if __name__ == '__main__':
                 ("ends on "+str(event['DEND'].date())+os.linesep)
         i = i + 1
 
-    icon = "<span rise='-1000'></span> "
+    icon = "<span rise='-1000'>󰨲</span> "
     out_data = {
         "text": f"{icon}",
         "tooltip": tooltip_text[:-1]
