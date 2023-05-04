@@ -14,3 +14,19 @@ set dircounts on
 set autoquit on
 set timefmt "[2/03/2006 15:04:05]"
 set tabstop 2 
+
+# KEYMAPS
+map A rename # at the very end
+map c push A<c-u> # new name
+map I push A<c-a> # at the very beginning
+map i push A<a-b><a-b><a-f> # before extention
+map a push A<a-b> # after extention
+
+map Y $printf "%s" "$fx" | wl-copy # yank the path
+map <enter> shell
+map t trash
+map x delete
+map u :{{
+  clear
+  unselect
+}}
