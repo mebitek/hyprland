@@ -70,7 +70,7 @@ ZSH_THEME="mebitek"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions history aliases archlinux colorize colored-man-pages command-not-found zsh-syntax-highlighting extract sudo)
+plugins=(git zsh-autosuggestions history aliases archlinux colorize colored-man-pages command-not-found zsh-syntax-highlighting extract sudo cp zsh-cloudflare-warp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,10 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias brave='brave --use-gl=egl --disable-features=UseChromeOSDirectVideoDecoder'
+alias brave='brave --use-gl=egl --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder --ozone-platform=wayland
+'
 alias cleanup_packages='(set -x; sudo pacman -Rscn $(pacman -Qdtq))'
 alias vi='nvim'
 alias unimatrix='unimatrix -c magenta -s 95'
 alias w='clear && fastfetch && echo ""'
+alias jf='clear && journalctl -f|ccze -A'
 
 w
