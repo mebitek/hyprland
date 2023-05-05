@@ -106,5 +106,7 @@ alias cleanup_packages='(set -x; sudo pacman -Rscn $(pacman -Qdtq))'
 alias vi='nvim'
 alias unimatrix='unimatrix -c magenta -s 95'
 alias w='clear && fastfetch && echo ""'
+alias sudo='sudo '
+
 
 w
