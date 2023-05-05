@@ -107,4 +107,4 @@ alias vi='nvim'
 alias unimatrix='unimatrix -c magenta -s 95'
 alias w='clear && fastfetch && echo ""'
 
-#w
+w
