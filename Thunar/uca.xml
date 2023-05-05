@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Apri un terminale qui</name>
+	<submenu></submenu>
+	<unique-id>1682493200393098-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Esempio di azione personalizzata</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+  <icon>image-png</icon>
+  <name>Convert to png</name>
+  <submenu></submenu>
+  <unique-id>1682493200393098-2</unique-id>
+  <command>/usr/local/bin/thunar-convert-to-png.sh -f %f</command>
+  <description>Convert an image file to a png file.</description>
+  <range></range>
+  <patterns>*.*</patterns>
+  <image-files/>
+  <startup-notify/>
+  <directories/>
+</action>  
+</actions>
