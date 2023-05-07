@@ -283,4 +283,16 @@ label:focus {
     color: #dbd9d8;
 }
 
+#custom-lenovo.extreme {
+  color: red
+}
+
+#custom-lenovo.battery {
+  color: green;
+}
+
+#custom-lenovo.intelligent {
+  color: blue;
+}
+
 
