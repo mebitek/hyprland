@@ -100,13 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias brave='brave --use-gl=egl --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder --ozone-platform=wayland
-'
+#alias brave='brave --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder --ozone-platform=wayland'
 alias cleanup_packages='(set -x; sudo pacman -Rscn $(pacman -Qdtq))'
 alias vi='nvim'
 alias unimatrix='unimatrix -c magenta -s 95'
 alias w='clear && fastfetch && echo ""'
 alias sudo='sudo '
-
 
 w
