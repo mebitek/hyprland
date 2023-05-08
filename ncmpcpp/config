@@ -320,6 +320,8 @@ song_columns_list_format = (20)[]{a} (6f)[blue]{NE} (50)[white]{t|f:Title} (20)[
 ## notifications etc.
 ##
 #execute_on_song_change = ""
+execute_on_song_change = /home/mebitek/bin/songinfo.sh
+
 #
 ##
 ## Note: Custom command that will be executed each time player state
