@@ -12,7 +12,10 @@ album_dir="$MUSIC_DIR/$album_dir"
 
 covers="$(find "$album_dir" -type d -exec find {} -maxdepth 1 -type f -iregex ".*/.*\(${album}\|cover\|folder\|artwork\|front\).*[.]\(jpe?g\|png\|gif\|bmp\)" \;)"
 src="$(echo -n "$covers" | head -n1)"
-previewname="$previewdir/$(echo $file | base64).png"
-[[ -e $previewname ]] || ffmpeg -y -i "$src" -an -vf scale=128:128 "$previewname" /dev/null 2>&1
+file_name=$(echo $file | base64).png
+
+previewname="$previewdir/$file_name"
+[[ -e $previewname ]] || ffmpeg -y -i "$src" -an -vf scale=128:128 "$previewname" 2>/dev/null
 
 notify-send -r 27072 "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current 2>/dev/null)" -i "$previewname"
+kitty @ set-background-image "${src}"

@@ -3,9 +3,16 @@
 PLAYING_STATUS=$(mpc status 2>/dev/null | awk 'FNR==2 {print $1}' RS='[' FS=']')
 
 if [[ $PLAYING_STATUS == "playing" ]]; then
-	echo "set to pause"
-	mpc pause 2>/dev/null
-else
-	echo "set to play"
-	mpc play 2>/dev/null
+	TEXT=" "
+	CLASS="playing"
+elif [[ $PLAYING_STATUS == "paused" ]]; then
+	TEXT=" "
+	CLASS="paused"
+elif [[ $PLAYING_STATUS == "stopped" ]]; then
+	TEXT=" "
+	CLASS="stopped"
 fi
+
+TOOLTIP="<span>test tooltip</span>"
+
+printf '%s\n' "{\"class\":\"$CLASS\",\"text\":\"$TEXT\",\"tooltip\":\"$TOOLTIP\"}"

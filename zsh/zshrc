@@ -106,5 +106,6 @@ alias vi='nvim'
 alias unimatrix='unimatrix -c magenta -s 95'
 alias w='clear && fastfetch && echo ""'
 alias sudo='sudo '
+alias ncmpcpp='ncmpcpp && kitty @ set-background-image none'
 
 w

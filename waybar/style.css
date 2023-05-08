@@ -296,3 +296,21 @@ label:focus {
 }
 
 
+tooltip {
+  border-radius: 4px;
+  border-color: #BF40BF;
+  background: rgba(0,0,0,0.9);
+  padding: 10px;
+/*	background: url("/tmp/cover.jpg") rgba(0,0,0,0.9);
+	background-size: contain;
+	background-repeat: no-repeat;
+*/
+}
+/*
+tooltip label {
+  color: @text;
+  padding-left: 6em;
+  margin-left: 10px;
+}*/
+
+

@@ -151,8 +151,8 @@
 		    "playing": "",
         "stopped": ""
 	    },
-      "on-click": "exec ~/.config/waybar/bin/mpd.sh",
-	    "tooltip-format": "{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+      "on-click": "exec ~/.config/waybar/bin/mpd_control.sh",
+	    "tooltip-format": "{artist}\n{album}\n{title}\n({elapsedTime:%M:%S}/{totalTime:%M:%S})",
 	    "tooltip-format-disconnected": "MPD (disconnected)"
 },
     "custom/logout": {
@@ -199,6 +199,14 @@
         "restart-interval": 5,
         "on-click": "~/.config/waybar/bin/lenovo.sh"
 
-      } 
+      },
+      "custom/mpd": {
+          "format": " {} ",
+          "return-type": "json",
+          "exec": "~/.config/waybar/bin/mpd.sh",
+          "restart-interval": 5,
+          "on-click": "~/.config/waybar/bin/mpd_control.sh"
+          
+        }
 }
 
