@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/wofi", "wlr/workspaces", "hyprland/window"],
     "modules-center": ["clock", "custom/agenda", "custom/weather"],
-    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "pulseaudio", "custom/lenovo", "battery", "custom/logout"],
+    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpd", "pulseaudio", "custom/lenovo", "battery", "custom/logout"],
     // Modules configuration
      "wlr/workspaces": {
          "on-click": "activate",
@@ -142,6 +142,19 @@
         },
         "on-click": "pavucontrol"
     },
+    "mpd": {
+    	"format": "{stateIcon} ",
+    	"format-disconnected": " ",
+    	"format-stopped": " ",
+	    "state-icons": {
+		    "paused": "",
+		    "playing": "",
+        "stopped": ""
+	    },
+      "on-click": "exec ~/.config/waybar/bin/mpd.sh",
+	    "tooltip-format": "{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+	    "tooltip-format-disconnected": "MPD (disconnected)"
+},
     "custom/logout": {
         "format": " <span rise='1000'>{icon}</span>",
         "on-click": "wlogout",
@@ -150,13 +163,13 @@
       },
 
     "custom/wofi": {
-        "format": " <span rise='1000'>{icon}</span>",
+        "format": " <span rise='1000'>{icon}</span> ",
         "on-click": "~/.config/rofi/bin/launcher",
         "format-icons": "",
         "tooltip": false
       },
     "custom/updates": {
-		    "format": " <span rise='1000'>{icon}</span>",
+		    "format": " <span rise='1000'>{icon}</span> ",
 		    "format-icons": ["\uF1B2", "\uF1B2"],
 		    "interval": 10,
 		    "return-type":"json",
@@ -172,7 +185,7 @@
         "on-click": "~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env"
       },
     "custom/agenda": {
-        "format": "{} ",
+        "format": " {} ",
         "exec": "python ~/.config/waybar/bin/nextcloud_cal.py",
         "restart-interval": 300,
         "return-type": "json",
@@ -180,7 +193,7 @@
 
       },
      "custom/lenovo": {
-        "format": "{} ",
+        "format": " {} ",
         "return-type": "json",
         "exec": "~/.config/waybar/bin/lenovo.sh",
         "restart-interval": 5,
