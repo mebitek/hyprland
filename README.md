@@ -1,6 +1,20 @@
 # hyprland
 Endeavour OS Hyprland Dotfiles
 
+## features
+
+* lenovo ARH7 integration
+* ncmpcpp bacground artwork
+* hyprland gestures
+* hyprland printscreen quick shortcuts
+* notification system
+* mopidy mpd 
+* oh my zsh powered
+* nextcloud caldav integration
+* wunderground weather integration
+* free memory shortcut
+* arch updates waybar module
+
 ## dependencies:
 
 1. arch:
