@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Import Current Theme
 RASI="$HOME/.config/rofi/screenshot.rasi"
@@ -136,22 +136,30 @@ run_cmd() {
 	fi
 }
 
-# Actions
-chosen="$(run_rofi)"
-case ${chosen} in
-$option_1)
+if [[ $1 == "1" ]]; then
 	run_cmd --opt1
-	;;
-$option_2)
+	exit 0
+elif [[ $1 == "2" ]]; then
 	run_cmd --opt2
-	;;
-$option_3)
-	run_cmd --opt3
-	;;
-$option_4)
-	run_cmd --opt4
-	;;
-$option_5)
-	run_cmd --opt5
-	;;
-esac
+	exit 0
+else
+	# Actions
+	chosen="$(run_rofi)"
+	case ${chosen} in
+	$option_1)
+		run_cmd --opt1
+		;;
+	$option_2)
+		run_cmd --opt2
+		;;
+	$option_3)
+		run_cmd --opt3
+		;;
+	$option_4)
+		run_cmd --opt4
+		;;
+	$option_5)
+		run_cmd --opt5
+		;;
+	esac
+fi
