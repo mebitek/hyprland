@@ -27,7 +27,7 @@ mpd_host = localhost
 #
 mpd_port = 6600
 #
-mpd_connection_timeout = 5
+mpd_connection_timeout = 30
 #
 ## Needed for tag editor and file operations to work.
 ##
@@ -231,7 +231,7 @@ visualizer_spectrum_hz_max = 10000
 ## Note: colors can be nested.
 ##
 #
-#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3%l$9}
+song_list_format = {%a - }{%t}|{$8%f$9}$R{$5%l$9}
 #
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
@@ -255,9 +255,9 @@ current_item_prefix = $(white)$r
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
-selected_item_prefix = $8
+selected_item_prefix = $5
 #
-selected_item_suffix = $8
+#selected_item_suffix = $8
 #
 #modified_item_prefix = $3> $9
 #
@@ -344,7 +344,7 @@ execute_on_song_change = /home/mebitek/bin/songinfo.sh
 ##
 #playlist_display_mode = columns
 #
-#browser_display_mode = classic
+#browser_display_mode = columns
 #
 #search_engine_display_mode = classic
 #
@@ -594,7 +594,7 @@ progressbar_elapsed_color = blue:b
 #
 #alternative_ui_separator_color = black:b
 #
-#window_border_color = green
+window_border_color = blue
 #
 #active_window_border = red
 #
