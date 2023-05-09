@@ -4,22 +4,22 @@ Endeavour OS Hyprland Dotfiles
 ## features
 
 * lenovo ARH7 integration
-* ncmpcpp bacground artwork
+* ncmpcpp background artwork
 * hyprland gestures
 * hyprland printscreen quick shortcuts
 * notification system
 * mopidy mpd 
 * oh my zsh powered
-* nextcloud caldav integration
-* wunderground weather integration
-* free memory shortcut
+* nextcloud caldav waybar integration
+* wunderground weather waybar integration
+* free memory waybar shortcut
 * arch updates waybar module
 
 ## dependencies:
 
 1. arch:
 ```
-pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock waybar-hyprland wlogout zsh 
+pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock-effects waybar-hyprland wlogout zsh 
 ```
 
 2. python:
