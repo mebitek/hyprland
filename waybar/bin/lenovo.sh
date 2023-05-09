@@ -9,8 +9,6 @@ ACTUAL_MODE=$(
 	tr -d '\0' </proc/acpi/call
 )
 
-echo $ACTUAL_MODE >~/lenovo.tmp
-
 if [[ $ACTUAL_MODE == $BATTERY ]]; then
 	MODE="Battery Saving"
 	CLASS="battery"
