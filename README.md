@@ -14,12 +14,13 @@ Endeavour OS Hyprland Dotfiles
 * wunderground weather waybar integration
 * free memory waybar shortcut
 * arch updates waybar module
+* random wallpaper script shortcut
 
 ## dependencies:
 
 1. arch:
 ```
-pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock-effects waybar-hyprland wlogout zsh 
+pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock-effects waybar-hyprland wlogout swaybg zsh 
 ```
 
 2. python:

@@ -1,0 +1,28 @@
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/EOS-JWST.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/EndeavourOS_purple blue.jpg
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/endeavouros-wallpaper-april-2021.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/EndeavourOS_purple blue.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/endeavouros_default_background.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/Lava_EndeavourOS.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/eos_trails_1440p.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/EOS-SPACE-4K.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_EOS-planet.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Rockwallaby_EOS_NEO.jpg
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_satelliet.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_EOS-planet_ultrawide.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/krimkerre_3_endy.jpg
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/EOS_MISSION_BADGE_4K.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_conquest_1140P_16-9_centered.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/neon_astronaut_endeavor.jpg
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/material_endeavour.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/CASSINI-2-MAIN-LOGO-LIGHT.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/stars-arm.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/CASSINI-3-MAIN-LOGO.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/stars.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/CASSINI-2-MAIN-LOGO.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/CASSINI-abstract.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/CASSINI-3-MAIN-LOGO-LIGHT.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_watching.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/krimkerre_4_endy_neon.jpg
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/krimkerre_2_poly.jpg
+/usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
