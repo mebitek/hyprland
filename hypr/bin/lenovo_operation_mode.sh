@@ -14,15 +14,15 @@ echo $ACTUAL_MODE
 if [[ $ACTUAL_MODE == $BATTERY ]]; then
 	echo "actual mode is ${BATTERY}, setting to INTELLIGENT"
 	echo '\_SB.PCI0.LPC0.EC0.VPC0.DYTC 0x000FB001' >/proc/acpi/call
-	notify-send -t 10000 "System Performance Mode: Intelligent Cooling" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
+	notify-send -r 6660666 -t 10000 "System Performance Mode: Intelligent Cooling" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
 elif [[ $ACTUAL_MODE == $INTELLIGENT ]]; then
 	echo "actual mode is ${INTELLIGENT}, setting to EXTREME"
 	echo '\_SB.PCI0.LPC0.EC0.VPC0.DYTC 0x0012B001' >/proc/acpi/call
-	notify-send -t 10000 "System Performance Mode: Extreme Performance" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
+	notify-send -r 6660666 -t 10000 "System Performance Mode: Extreme Performance" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
 elif [[ $ACTUAL_MODE == $EXTREME ]]; then
 	echo "actual mode is ${EXTREME}, setting to BATTERY"
 	echo '\_SB.PCI0.LPC0.EC0.VPC0.DYTC 0x0013B001' >/proc/acpi/call
-	notify-send -t 10000 "System Performance Mode: Battery Saving" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
+	notify-send -r 6660666 -t 10000 "System Performance Mode: Battery Saving" --icon=/usr/share/icons/Dracula/scalable/apps/preferences-system-performance.svg
 else
 	echo "invalid mode"
 	exit 1
