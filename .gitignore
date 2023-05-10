@@ -1,3 +1,4 @@
 **/.env
 ncmpcpp/previews
 **/credentials*
+**/*.log
