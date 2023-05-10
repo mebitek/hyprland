@@ -28,6 +28,17 @@ pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy
 pip install asyncio mopidy_async_client caldav configparser Requests 
 ```
 
+## notes:
+
+before using the hyprland config check the keyboard layout and change as you need
+
+```
+input {
+    kb_layout = us
+    ...
+  }
+```
+
 ![image](https://github.com/mebitek/hyprland/assets/1067967/7f491e1a-a438-4ca2-9990-2bc9634be201)
 
 ![Screenshot 2023-04-27-12-16-10](https://user-images.githubusercontent.com/1067967/234836950-e748286b-6fa9-494b-b13e-71dcaef90464.png)
