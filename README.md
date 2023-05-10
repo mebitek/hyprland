@@ -1,7 +1,7 @@
-# hyprland
+# Hyprland
 Endeavour OS Hyprland Dotfiles
 
-## features
+## Features
 
 * lenovo ARH7 integration
 * ncmpcpp background artwork
@@ -16,7 +16,7 @@ Endeavour OS Hyprland Dotfiles
 * arch updates waybar module
 * random wallpaper script shortcut
 
-## dependencies:
+## Dependencies:
 
 1. arch:
 ```
@@ -28,7 +28,7 @@ pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy
 pip install asyncio mopidy_async_client caldav configparser Requests 
 ```
 
-## notes:
+## Notes:
 
 before using the hyprland config check the keyboard layout and change as you need
 
@@ -38,6 +38,7 @@ input {
     ...
   }
 ```
+## Screenshots
 
 ![image](https://github.com/mebitek/hyprland/assets/1067967/7f491e1a-a438-4ca2-9990-2bc9634be201)
 
