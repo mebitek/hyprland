@@ -1,0 +1,54 @@
+[calendars]
+
+[[personal]]
+path = /home/mebitek/.local/share/khal/calendars/personal
+type = calendar
+color = 104
+
+[[work]]
+path = /home/mebitek/.local/share/khal/calendars/lavoro/
+type = calendar
+color = 107
+
+[[lily]]
+path = /home/mebitek/.local/share/khal/calendars/lily/
+type = calendar
+color = 185
+
+[[ferie]]
+path = /home/mebitek/.local/share/khal/calendars/ferie/
+type = calendar
+color = 208
+
+[[recupero]]
+path = /home/mebitek/.local/share/khal/calendars/recupero/
+type = calendar
+color = 38
+
+[[birthday]]
+path = /home/mebitek/.local/share/khal/calendars/contact_birthdays/
+type = calendar
+color = 133
+
+[[deck]]
+path = /home/mebitek/.local/share/khal/calendars/app-generated--deck--board-1/
+type = calendar
+color = 196
+
+[default]
+default_calendar = personal
+highlight_event_days = true
+timedelta = 3d
+
+[locale]
+local_timezone = Europe/Rome
+default_timezone = Europe/Rome
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M
+
+[view]
+blank_line_before_day = true
+dynamic_days = false

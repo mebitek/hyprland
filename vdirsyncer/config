@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.vdirsyncer/status/"
+
+[pair nextcloud_calendar]
+a = "nextcloud_calendar_local"
+b = "nextcloud_calendar_remote"
+collections = ["personal", "lavoro", "lily","contact_birthdays", "ferie", "recupero","app-generated--deck--board-1"]
+metadata = ["displayname", "color"]
+
+[storage nextcloud_calendar_local]
+type = "filesystem"
+path = "~/.local/share/khal/calendars/"
+fileext = ".ics"
+
+[storage nextcloud_calendar_remote]
+type = "caldav"
+url = "https://nextcloud.mebitek.com/remote.php/dav"
+username = "mebitek"
+password.fetch = ["shell", "cat ~/.config/vdirsyncer/credentials.conf|grep NEXTCLOUD_PASSWORD|cut -d'=' -f2"]
