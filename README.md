@@ -15,6 +15,7 @@ Endeavour OS Hyprland Dotfiles
 * free memory waybar shortcut
 * arch updates waybar module
 * random wallpaper script shortcut
+* neomutt, mbsync, msmtp
 
 ## Dependencies:
 
