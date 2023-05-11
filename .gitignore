@@ -2,3 +2,4 @@
 ncmpcpp/previews
 **/credentials*
 **/*.log
+**/*temp*

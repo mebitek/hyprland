@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["custom/wofi", "wlr/workspaces", "hyprland/window"],
-    "modules-center": ["clock", "custom/agenda", "custom/weather"],
+    "modules-center": ["clock", "custom/agenda", "custom/mail", "custom/weather"],
     "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpd", "pulseaudio", "custom/lenovo", "battery", "custom/logout"],
     // Modules configuration
      "wlr/workspaces": {
@@ -208,6 +208,13 @@
           "restart-interval": 5,
           "on-click": "~/.config/waybar/bin/mpd_control.sh"
           
+        },
+      "custom/mail": {
+          "format": " {} ",
+          "return-type": "json",
+          "exec": "~/.config/waybar/bin/check_mail.sh",
+          "restart-interval": 60,
+          "on-click": "~/.config/waybar/bin/check_mail.sh"
         }
 }
 

@@ -1,0 +1,27 @@
+# imap
+set imap_user            = "info@mebitek.com"
+
+# Identity
+set from                 = $imap_user
+#set signature            = "~/.config/neomutt/info_mebitek.signature"
+
+# Account-specific folders
+set folder               = "~/.mail/info_mebitek/"
+set spoolfile            = +Inbox
+set postponed            = "+Drafts"
+set record               = "+Sent"
+set trash                = "+Trash"
+account-hook $folder 'set imap_user=$imap_user'
+# Account-specific cache folders
+#set alias_file           = "~/.cache/neomutt/info_mebitek/aliases"
+set header_cache         = "~/.cache/neomutt/info_mebitek/headers"
+set message_cachedir     = "~/.cache/neomutt/info_mebitek/bodies"
+#set certificate_file     = "~/.cache/neomutt/info_mebitek/certificates"
+
+unmailboxes *
+
+mailboxes `find .mail/info_mebitek -maxdepth 2 -type d ! -path ".mail/info_mebitek" ! -path "*cur*" ! -path "*new*" ! -path "*tmp*" -printf '%p ' | tr '.' '\n' | sort | sed -e "s/mail\/info_mebitek\///g" | paste -sd'+'`
+named-mailboxes "info mebitek.com" $spoolfile
+
+set sendmail             = "/usr/bin/msmtp -a info_mebitek"
+set sendmail_wait        = -1

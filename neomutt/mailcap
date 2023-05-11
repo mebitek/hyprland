@@ -1,0 +1,17 @@
+# MS Word documents
+application/msword; libreoffice %s
+application/vnd.ms-excel; libreoffice %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice %s
+application/vnd.oasis.opendocument.text; libreoffice %s
+application/vnd.openxm; libreoffice %s
+
+# HTML
+text/html; w3m -o auto_image=TRUE -I %{charset} -T text/html; copiousoutput;
+text/plain; nvim %s
+
+#PDFs
+application/pdf; /usr/bin/zathura %s pdf
+
+#Images
+image/png; /usr/bin/pix %s
+image/jpeg; /usr/bin/pix %s

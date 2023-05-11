@@ -1,0 +1,47 @@
+account cm_mebitek
+host mail.mebitek.com
+port 465
+from claudio.melis@mebitek.com
+user claudio.melis@mebitek.com
+passwordeval "pass claudio.melis@mebitek.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/mebitek/.config/msmtp/msmtp.log
+tls_starttls off
+
+account info_mebitek
+host mail.mebitek.com
+port 465
+from info@mebitek.com
+user info@mebitek.com
+passwordeval "pass claudio.melis@mebitek.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/mebitek/.config/msmtp/msmtp.log
+tls_starttls off
+
+account murena
+host mail.ecloud.global
+port 587
+from mebitek@murena.io
+user mebitek@murena.io
+passwordeval "pass murena"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/mebitek/.config/msmtp/msmtp.log
+tls_starttls on
+
+account zohomail
+host smtp.zoho.eu
+port 465
+from mebitek@zohomail.eu
+user mebitek@zohomail.eu
+passwordeval "pass zohomail"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/mebitek/.config/msmtp/msmtp.log
+tls_starttls off

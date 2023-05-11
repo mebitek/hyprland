@@ -1,0 +1,19 @@
+# vim: filetype=muttrc
+
+source ~/.config/neomutt/settings
+source ~/.config/neomutt/colors
+source ~/.config/neomutt/mappings
+
+# Accounts
+
+source ~/.config/neomutt/accounts/murena
+folder-hook $folder 'source ~/.config/neomutt/accounts/murena'
+
+source ~/.config/neomutt/accounts/claudio_melis_mebitek
+folder-hook $folder 'source ~/.config/neomutt/accounts/claudio_melis_mebitek'
+
+source ~/.config/neomutt/accounts/info_mebitek
+folder-hook $folder 'source ~/.config/neomutt/accounts/info_mebitek'
+
+source ~/.config/neomutt/accounts/zohomail
+folder-hook $folder 'source ~/.config/neomutt/accounts/zohomail'

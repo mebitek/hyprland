@@ -1,0 +1,27 @@
+# imap
+set imap_user            = "mebitek@murena.io"
+
+# Identity
+set from                 = $imap_user
+#set signature            = "~/.config/neomutt/murena.signature"
+
+# Account-specific folders
+set folder               = "~/.mail/murena"
+set spoolfile            = +Inbox
+set postponed            = "+Drafts"
+set record               = "+Sent"
+set trash                = "+Trash"
+account-hook $folder 'set imap_user=$imap_user'
+# Account-specific cache folders
+#set alias_file           = "~/.cache/neomutt/murena/aliases"
+set header_cache         = "~/.cache/neomutt/murena/headers"
+set message_cachedir     = "~/.cache/neomutt/murena/bodies"
+#set certificate_file     = "~/.cache/neomutt/murena/certificates"
+
+unmailboxes *
+
+mailboxes `find .mail/murena -maxdepth 2 -type d ! -path ".mail/murena" ! -path "*cur*" ! -path "*new*" ! -path "*tmp*" -printf '%p ' | tr '.' '\n' | sort | sed -e "s/mail\/murena\///g" | paste -sd'+'`
+named-mailboxes "murena" $spoolfile
+
+set sendmail             = "/usr/bin/msmtp -a murena"
+set sendmail_wait        = -1

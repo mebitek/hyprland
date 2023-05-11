@@ -295,6 +295,10 @@ label:focus {
   color: #bf40bf;
 }
 
+#custom-mail.newmail {
+  color: #bf40bf;
+}
+
 
 tooltip {
   border-radius: 4px;

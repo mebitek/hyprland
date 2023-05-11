@@ -1,0 +1,30 @@
+# imap
+set imap_user            = "mebitek@zohomail.eu"
+
+# Identity
+set from                 = $imap_user
+#set signature            = "~/.config/neomutt/personal.signature"
+
+# Account-specific folders
+set folder               = "~/.mail/zohomail"
+set spoolfile            = +Inbox
+set postponed            = "+Drafts"
+set record               = "+Sent"
+set trash                = "+Trash"
+account-hook $folder 'set imap_user=$imap_user'
+# Account-specific cache folders
+#set alias_file           = "~/.cache/neomutt/personal/aliases"
+set header_cache         = "~/.cache/neomutt/zohomail/headers"
+set message_cachedir     = "~/.cache/neomutt/zohomail/bodies"
+#set certificate_file     = "~/.cache/neomutt/personal/certificates"
+
+unmailboxes *
+
+mailboxes `find .mail/zohomail -maxdepth 2 -type d ! -path ".mail/zohomail" ! -path "*cur*" ! -path "*new*" ! -path "*tmp*" -printf '%p ' | tr '.' '\n' | sort | sed -e "s/mail\/zohomail\///g" | paste -sd'+'`
+
+named-mailboxes "zohomail" $spoolfile
+
+
+
+set sendmail             = "/usr/bin/msmtp -a zohomail"
+set sendmail_wait        = -1

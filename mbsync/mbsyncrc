@@ -1,0 +1,271 @@
+############
+#  Murena  #
+############
+
+IMAPAccount murena 
+Host mail.ecloud.global 
+User mebitek@murena.io
+PassCmd "echo $(cat ~/.config/mbsync/credentials.conf|grep MURENA_PASSWORD|cut -d'=' -f2)"
+TLSType IMAPS
+AuthMechs PLAIN
+PipelineDepth 1
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore murena-remote
+Account murena 
+
+MaildirStore murena-local
+# The trailing "/" is important
+Path ~/.mail/murena/
+Inbox ~/.mail/murena/Inbox
+
+Channel murena-drafts
+Far :murena-remote:"Drafts"
+Near :murena-local:Drafts
+Create Near
+
+Channel murena-sent
+Far :murena-remote:"Sent"
+Near :murena-local:Sent
+Create Near
+
+Channel murena-spam
+Far :murena-remote:"Spam"
+Near :murena-local:Spam
+Create Near
+
+Channel murena-trash
+Far :murena-remote:"Trash"
+Near :murena-local:Trash
+Create Near
+
+Channel murena-inbox
+Far :murena-remote:
+Near :murena-local:
+Patterns * ![Murena]* !Drafts !Sent !Spam !Trash
+Expunge Both
+Create Near
+Sync All
+SyncState *
+
+Group murena
+Channel murena-drafts
+Channel murena-sent
+Channel murena-spam
+Channel murena-trash
+Channel murena-inbox
+
+############
+# zohomail #
+############
+
+IMAPAccount zohomail
+Host imap.zoho.eu
+User mebitek@zohomail.eu
+PassCmd "echo $(cat ~/.config/mbsync/credentials.conf|grep ZOHOMAIL_PASSWORD|cut -d'=' -f2)"
+TLSType IMAPS
+PipelineDepth 1
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore zohomail-remote
+Account zohomail
+
+MaildirStore zohomail-local
+# The trailing "/" is important
+Path ~/.mail/zohomail/
+Inbox ~/.mail/zohomail/Inbox
+
+Channel zohomail-drafts
+Far :zohomail-remote:"DRAFTS"
+Near :zohomail-local:Drafts
+Create Near
+
+Channel zohomail-templates
+Far :zohomail-remote:"TEMPLATES"
+Near :zohomail-local:Templates
+Create Near
+
+Channel zohomail-snoozed
+Far :zohomail-remote:"SNOOZED"
+Near :zohomail-local:Snoozed
+Create Near
+
+Channel zohomail-spam
+Far :zohomail-remote:"SPAM"
+Near :zohomail-local:Spam
+Create Near
+
+Channel zohomail-trash
+Far :zohomail-remote:"TRASH"
+Near :zohomail-local:Trash
+Create Near
+
+Channel zohomail-sent
+Far :zohomail-remote:"SENT"
+Near :zohomail-local:Sent
+Create Near
+
+Channel zohomail-archivio
+Far :zohomail-remote:"ARCHIVIO"
+Near :zohomail-local:Archivio
+Create Near
+
+Channel zohomail-queue
+Far :zohomail-remote:"QUEUE"
+Near :zohomail-local:Queue
+Create Near
+
+Channel zohomail-inbox
+Far :zohomail-remote:"INBOX"
+Near :zohomail-local:Inbox
+Expunge Both
+Create Near
+Sync All
+SyncState *
+
+Group zohomail
+Channel zohomail-drafts
+Channel zohomail-sent
+Channel zohomail-spam
+Channel zohomail-trash
+Channel zohomail-templates
+Channel zohomail-snoozed
+Channel zohomail-archivio
+Channel zohomail-queue
+Channel zohomail-inbox
+
+###############################
+#  claudio melis mebitek.com  #
+###############################
+
+IMAPAccount cm_mebitek
+Host mail.mebitek.com
+User claudio.melis@mebitek.com
+PassCmd "echo $(cat ~/.config/mbsync/credentials.conf|grep CM_MEBITEK_PASSWORD|cut -d'=' -f2)"
+TLSType IMAPS
+AuthMechs PLAIN
+PipelineDepth 1
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore cm_mebitek-remote
+Account cm_mebitek 
+
+MaildirStore cm_mebitek-local
+# The trailing "/" is important
+Path ~/.mail/cm_mebitek/
+Inbox ~/.mail/cm_mebitek/Inbox
+
+Channel cm_mebitek-drafts
+Far :cm_mebitek-remote:"Drafts"
+Near :cm_mebitek-local:Drafts
+Create Near
+
+Channel cm_mebitek-sent
+Far :cm_mebitek-remote:"Sent"
+Near :cm_mebitek-local:Sent
+Create Near
+
+Channel cm_mebitek-spam
+Far :cm_mebitek-remote:"spam"
+Near :cm_mebitek-local:Spam
+Create Near
+
+Channel cm_mebitek-archive
+Far :cm_mebitek-remote:"Archive"
+Near :cm_mebitek-local:Archive
+Create Near
+
+Channel cm_mebitek-queue
+Far :cm_mebitek-remote:"Queue"
+Near :cm_mebitek-local:Queue
+Create Near
+
+Channel cm_mebitek-trash
+Far :cm_mebitek-remote:"Trash"
+Near :cm_mebitek-local:Trash
+Create Near
+
+Channel cm_mebitek-inbox
+Far :cm_mebitek-remote:"INBOX"
+Near :cm_mebitek-local:Inbox
+Expunge Both
+Create Near
+Sync All
+SyncState *
+
+Group cm_mebitek
+Channel cm_mebitek-drafts
+Channel cm_mebitek-sent
+Channel cm_mebitek-spam
+Channel cm_mebitek-trash
+Channel cm_mebitek-archive
+Channel cm_mebitek-queue
+Channel cm_mebitek-inbox
+
+######################
+#  info mebitek.com  #
+######################
+
+IMAPAccount info_mebitek
+Host mail.mebitek.com
+User info@mebitek.com
+PassCmd "echo $(cat ~/.config/mbsync/credentials.conf|grep INFO_MEBITEK_PASSWORD|cut -d'=' -f2)"
+TLSType IMAPS
+AuthMechs PLAIN
+PipelineDepth 1
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore info_mebitek-remote
+Account info_mebitek 
+
+MaildirStore info_mebitek-local
+# The trailing "/" is important
+Path ~/.mail/info_mebitek/
+Inbox ~/.mail/info_mebitek/Inbox
+
+Channel info_mebitek-drafts
+Far :info_mebitek-remote:"Drafts"
+Near :info_mebitek-local:Drafts
+Create Near
+
+Channel info_mebitek-sent
+Far :info_mebitek-remote:"Sent"
+Near :info_mebitek-local:Sent
+Create Near
+
+Channel info_mebitek-spam
+Far :info_mebitek-remote:"spam"
+Near :info_mebitek-local:Spam
+Create Near
+
+Channel info_mebitek-archive
+Far :info_mebitek-remote:"Archive"
+Near :info_mebitek-local:Archive
+Create Near
+
+Channel info_mebitek-queue
+Far :info_mebitek-remote:"Queue"
+Near :info_mebitek-local:Queue
+Create Near
+
+Channel info_mebitek-trash
+Far :info_mebitek-remote:"Trash"
+Near :info_mebitek-local:Trash
+Create Near
+
+Channel info_mebitek-inbox
+Far :info_mebitek-remote:"INBOX"
+Near :info_mebitek-local:Inbox
+Expunge Both
+Create Near
+Sync All
+SyncState *
+
+Group info_mebitek
+Channel info_mebitek-drafts
+Channel info_mebitek-sent
+Channel info_mebitek-spam
+Channel info_mebitek-trash
+Channel info_mebitek-archive
+Channel info_mebitek-queue
+Channel info_mebitek-inbox
