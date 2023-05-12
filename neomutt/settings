@@ -71,5 +71,8 @@ set message_cachedir = "~/.cache/mutt"
 
 set query_command = "khard email --parsable --search-in-source-files '%s'"
 
+auto_view text/html
+alternative_order text/enriched text/plain text/html text
+
 #set new_mail_command="notify-send -i '/usr/share/icons/Dracula/scalable/apps/mail-generic.svg' \
 #'New Email' '%D\n%n new messages, %u unread.' &"

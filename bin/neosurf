@@ -1,0 +1,16 @@
+if [[ $# -eq 0 ]]; then
+  neosurf-vi 2> /dev/null
+  exit 0
+ fi
+
+curl $1 2> /dev/null
+if [[ $? -eq 0 ]]; then
+  neosurf-vi $1 2> /dev/null
+else
+  regex='(https?|ftp|file)://[-[:alnum:]\+&@#/%?=~_|!:,.;]*[-[:alnum:]\+&@#/%=~_|]'
+  if [[ $1 =~ $regex ]]; then 
+    neosurf-vi $1 2> /dev/null
+  else
+    neosurf-vi file://$1 2> /dev/null
+  fi 
+fi
