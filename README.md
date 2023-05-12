@@ -16,6 +16,7 @@ Endeavour OS Hyprland Dotfiles
 * arch updates waybar module
 * random wallpaper script shortcut
 * neomutt, mbsync, msmtp
+* change refresh rate 
 
 ## Dependencies:
 
