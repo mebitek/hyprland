@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/wofi", "wlr/workspaces", "hyprland/window"],
     "modules-center": ["clock", "custom/agenda", "custom/mail", "custom/weather"],
-    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpd", "pulseaudio", "custom/lenovo", "battery", "custom/logout"],
+    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpd", "pulseaudio", "custom/monitor", "custom/lenovo", "battery", "custom/logout"],
     // Modules configuration
      "wlr/workspaces": {
          "on-click": "activate",
@@ -215,6 +215,14 @@
           "exec": "~/.config/waybar/bin/check_mail.sh",
           "restart-interval": 60,
           "on-click": "~/.config/waybar/bin/check_mail.sh"
+        },
+      "custom/monitor": {
+          "format": " {} ",
+          "return-type": "json",
+          "exec": "~/.config/waybar/bin/refresh.sh",
+          "restart-interval": 5,
+          "on-click": "~/.config/hypr/bin/set_refresh_rate.sh"
         }
+
 }
 

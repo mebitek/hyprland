@@ -299,6 +299,14 @@ label:focus {
   color: #bf40bf;
 }
 
+#custom-monitor.max {
+  color: #bf40bf;
+}
+
+#custom-monitor.min {
+  color: green;
+}
+
 
 tooltip {
   border-radius: 4px;
