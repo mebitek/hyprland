@@ -6,7 +6,7 @@ application/vnd.oasis.opendocument.text; libreoffice %s
 application/vnd.openxm; libreoffice %s
 
 # HTML
-text/html; neosurf %s; nametemplate=%s.html; needsterminal; copiousoutput
+text/html; neosurf-vi %s; nametemplate=%s.html; needsterminal; copiousoutput
 
 #PDFs
 application/pdf; /usr/bin/zathura %s pdf
