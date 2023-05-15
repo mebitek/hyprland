@@ -111,4 +111,8 @@ alias ping='gping -c "#bf40bf"'
 alias gobsidian='glow ~/Nextcloud/Obsidian'
 alias pkg_list='expac --timefmt="%Y-%m-%d %T" "%l\t%n"|sort -n'
 
+eval "$(mcfly init zsh)"
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=2
+
 w
