@@ -6,6 +6,7 @@ a = "nextcloud_calendar_local"
 b = "nextcloud_calendar_remote"
 collections = ["personal", "lavoro", "lily","contact_birthdays", "ferie", "recupero","app-generated--deck--board-1"]
 metadata = ["displayname", "color"]
+conflict_resolution = "b wins"
 
 [storage nextcloud_calendar_local]
 type = "filesystem"
