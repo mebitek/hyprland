@@ -180,6 +180,7 @@
 		    "tooltip": true
 	    },
     "custom/weather": {
+        "format": " {} ",
         "exec": "python ~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env",
         "restart-interval": 300,
         "return-type": "json",
