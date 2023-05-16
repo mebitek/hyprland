@@ -112,6 +112,9 @@ alias gobsidian='glow ~/Nextcloud/Obsidian'
 alias pkg_list='expac --timefmt="%Y-%m-%d %T" "%l\t%n"|sort -n'
 alias ls='lsd'
 alias watch='viddy'
+alias df='duf'
+alias du='cdu -i -s -d h'
+alias neomutt='cd $HOME && neomutt'
 
 eval "$(mcfly init zsh)"
 export MCFLY_KEY_SCHEME=vim
