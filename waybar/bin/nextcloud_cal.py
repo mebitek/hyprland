@@ -31,10 +31,8 @@ locale.setlocale(locale.LC_TIME, locale.getdefaultlocale())
 
 # parse event data into dictionary
 def parseInfo(data, name):
-    events = re.split(
-        "END:VEVENT\nBEGIN:VEVENT\n|END:VEVENT\nEND:VCALENDAR\n\n|END:VTODO\nBEGIN:VTODO", data)
-    for event in events:
-        pieces = event.split('\n')
+
+        pieces = data.split('\n')
         keys = []
         values = []
         tStart = 0
@@ -102,7 +100,10 @@ if __name__ == '__main__':
                 days=int(config['DEFAULT']['time_delta'])), todo=True)
 
         for ev in results:
-            event_data.append(parseInfo(ev.data, name))
+            events = re.split(
+                "END:VEVENT\nBEGIN:VEVENT\n|END:VEVENT\nBEGIN:VCALENDAR|END:VEVENT\nEND:VCALENDAR\n\n|END:VTODO\nBEGIN:VTODO", ev.data)
+            for event in events:
+                event_data.append(parseInfo(event, name))
         for ev in tasks:
             if ev.data.__contains__("DUE"):
                 event_data.append(parseInfo(ev.data, name)
