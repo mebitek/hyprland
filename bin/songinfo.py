@@ -22,7 +22,6 @@ async def main():
         image_url = images[uri][0]['uri']
 
         a = urlparse(image_url)
-        print(a)
         file_name = os.path.basename(a.path)
         tmp_file_name = "/tmp/%s"%file_name
     
