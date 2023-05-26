@@ -59,6 +59,19 @@ location = json_data["observations"][0]['neighborhood']
 
 # current temperature
 temp = json_data["observations"][0]['metric']['temp']
+if temp >= 40:
+    css_class = "very_high"
+if temp >= 30 and temp < 40:
+    css_class = "high"
+if temp >= 20 and temp < 30:
+    css_class = "good"
+if temp >= 10 and temp < 20:
+    css_class = "fair"
+if temp >= 0 and temp < 10:
+    css_class = "cold"
+if temp < 0:
+    css_class =" very_cold"
+
 # print(temp)
 
 # current status phrase
@@ -137,6 +150,6 @@ out_data = {
     "text": f"<span rise='1000'>{icon}</span> {temp}",
     "alt": status,
     "tooltip": tooltip_text,
-    "class": status_code.replace(" ", ""),
+    "class": css_class,
 }
 print(json.dumps(out_data))
