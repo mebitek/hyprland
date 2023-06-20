@@ -15,7 +15,9 @@ async def main():
         uri = track['uri']
         name = track['name']
         artist = track['artists'][0]['name']
-        album = track['album']['name']
+        album = ""
+        if 'name' in track['album']:
+            album = track['album']['name']
 
         images = await mopidy.library.get_images([uri])
         
