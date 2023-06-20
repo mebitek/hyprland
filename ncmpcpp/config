@@ -465,7 +465,7 @@ startup_screen = media_library
 #
 #ask_for_locked_screen_width_part = yes
 #
-#jump_to_now_playing_song_at_start = yes
+jump_to_now_playing_song_at_start = yes
 #
 #ask_before_clearing_playlists = yes
 #
