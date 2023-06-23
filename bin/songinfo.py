@@ -14,7 +14,9 @@ async def main():
         track = await mopidy.playback.get_current_track()
         uri = track['uri']
         name = track['name']
-        artist = track['artists'][0]['name']
+        artist = ""
+        if 'artists' in track:
+            artist = track['artists'][0]['name']
         album = False
         if 'name' in track['album']:
             album = track['album']['name']
