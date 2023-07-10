@@ -28,6 +28,25 @@ weather_icons = {
     "default": "",
 }
 
+windnames = {
+    "N": "Tramontana",
+    "NNE": "Bora",
+    "NE": "Grecale",
+    "ENE": "Schiavo",
+    "E": "Levante",
+    "ESE": "Solano",
+    "SE": "Scirocco",
+    "SSE": "Africo",
+    "S": "Ostro",
+    "SSW": "Gauro",
+    "SW": "Libeccio",
+    "WSW": "Etesia",
+    "W": "Ponente",
+    "WNW": "Traversone",
+    "NW": "Maestrale",
+    "NNW": "Zefiro"
+}
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-c", "--config", type=str)
 
@@ -112,7 +131,9 @@ wind_speed = json_data["observations"][0]['metric']['windSpeed']
 wind_dir = json_data["observations"][0]['winddir']
 
 cardinal = degrees_to_cardinal(wind_dir)
-wind_text = f" {cardinal} {wind_speed} Km/h"
+
+wind_name = windnames[cardinal]
+wind_text = f" {cardinal} {wind_speed} Km/h ({wind_name})"
 # print(wind_text)
 
 # humidity
