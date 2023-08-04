@@ -24,6 +24,7 @@ weather_icons = {
     "Few Showers": "",
     "Showers": "",
     "Light Rain": "",
+    "Rain": "",
     "Scattered Thunderstorms": "",
     "default": "",
 }
@@ -73,6 +74,7 @@ url = str.format(
     "{}{}{}", f'https://api.weather.com/v3/wx/forecast/daily/5day?geocode={lat},', f'{lon}&format=json&units=m&language=en-US&apiKey=', f'{api_key}')
 json_data_forecast = json.load(urlopen(url=url))
 
+
 # location
 location = json_data["observations"][0]['neighborhood']
 
@@ -96,8 +98,7 @@ if temp < 0:
 # current status phrase
 status = json_data_forecast['narrative'][0]
 
-status_code = json_data_forecast['daypart'][0]['wxPhraseLong'][1]
-
+status_code = json_data_forecast['daypart'][0]['wxPhraseLong'][0]
 # status icon
 icon = (
     weather_icons[status_code]
