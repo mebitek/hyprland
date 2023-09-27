@@ -5,11 +5,11 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/wofi", "wlr/workspaces", "hyprland/window"],
+    "modules-left": ["custom/wofi", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock", "custom/agenda", "custom/mail", "custom/weather"],
     "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpd", "pulseaudio", "custom/monitor", "custom/lenovo", "battery", "custom/logout"],
     // Modules configuration
-     "wlr/workspaces": {
+     "hyprland/workspaces": {
          "on-click": "activate",
          "format": "{icon}",
          "format-icons": {
