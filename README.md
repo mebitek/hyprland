@@ -22,7 +22,7 @@ Endeavour OS Hyprland Dotfiles
 
 1. arch:
 ```
-pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock-effects waybar-hyprland wlogout swaybg zsh 
+pacman -S hyprland xdg-desktop-portal-hyprland rofi thunar dunst kitty lf mopidy mopidy-local mopidy-mpd mopidy-jellyfin mopidy-bandcamp ncmpcpp swaylock-effects waybar-hyprland wlogout swaybg zsh hypridle hyprlock
 ```
 
 2. python:
