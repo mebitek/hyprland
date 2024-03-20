@@ -47,6 +47,7 @@ load_from_dir() {
 load_from_list() {
 	check_file "${1}"
 	FILE=$(shuf -n 1 "${1}")
+	cp ${FILE} ~/.cache/wallpaper.png
 	load_image "${FILE}"
 }
 

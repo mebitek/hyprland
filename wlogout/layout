@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock --effect-blur 7x2 --screenshot --fade-in 0.5",
+    "action" : "hyprlock --imemdiate",
     "text" : "Lock",
     "keybind" : "l",
 }
