@@ -1,4 +1,6 @@
 @theme "~/.config/rofi/pick.rasi"
 configuration {
     terminal: "/usr/bin/kitty";
+    me-select-entry: "";
+    me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
   }
