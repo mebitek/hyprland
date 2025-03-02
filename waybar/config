@@ -198,7 +198,7 @@
         "return-type": "json",
         "exec": "~/.config/waybar/bin/lenovo.sh",
         "restart-interval": 5,
-        "on-click": "~/.config/waybar/bin/lenovo.sh"
+        "on-click": "~/bin/lenovo_operation_mode.sh"
 
       },
       "custom/mpd": {
