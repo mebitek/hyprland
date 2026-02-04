@@ -1,4 +1,9 @@
 # SETTINGS
+set shell zsh
+set shellopts '-euy'
+set ifs "\n"
+set filesep "\n"  # default already
+
 set preview on
 set previewer ctpv
 set cleaner ctpvclear
