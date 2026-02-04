@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 [ ! -r ~/.config/mbsync/mbsyncrc ] && exit 0
 
