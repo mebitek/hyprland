@@ -10,11 +10,6 @@ path = /home/mebitek/.local/share/khal/calendars/lavoro/
 type = calendar
 color = 107
 
-[[lily]]
-path = /home/mebitek/.local/share/khal/calendars/lily/
-type = calendar
-color = 185
-
 [[ferie]]
 path = /home/mebitek/.local/share/khal/calendars/ferie/
 type = calendar
@@ -34,6 +29,12 @@ color = 133
 path = /home/mebitek/.local/share/khal/calendars/app-generated--deck--board-1/
 type = calendar
 color = 196
+
+[[victron]]
+path = /home/mebitek/.local/share/khal/calendars/app-generated--deck--board-6/
+type = calendar
+color  = 215
+
 
 [default]
 default_calendar = personal
