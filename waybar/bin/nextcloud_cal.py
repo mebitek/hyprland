@@ -67,7 +67,7 @@ def parseDate(dateString):
     if len(pieces) == 1:
         return datetime.strptime(dateString, "%Y%m%d") + timedelta(hours=0)
     else:
-        return datetime.strptime(dateString, "%Y%m%dT%H%M%SZ") + timedelta(hours=2)
+        return datetime.strptime(dateString, "%Y%m%dT%H%M%S") + timedelta(hours=2)
 
 
 def getKey(item):
