@@ -9,3 +9,5 @@ themes:
     base: "Dark"
 
     foreground: "#BF40BF"
+    tab_active_foreground: "auto"
+    progress_fill: "auto"
