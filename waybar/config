@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/wofi", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock", "custom/agenda", "custom/mail", "custom/weather"],
-    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "custom/mpd", "pulseaudio", "custom/monitor", "custom/lenovo", "battery", "custom/logout"],
+    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpris", "pulseaudio", "custom/monitor", "custom/lenovo", "battery", "custom/logout"],
     // Modules configuration
      "hyprland/workspaces": {
          "on-click": "activate",
@@ -222,7 +222,22 @@
           "exec": "~/.config/waybar/bin/refresh.sh",
           "restart-interval": 5,
           "on-click": "~/.config/hypr/bin/set_refresh_rate.sh"
-        }
+        },
+
+      "mpris": {
+          "player": "jellyfin-tui",
+      	  "format": "{player_icon} {status_icon}",
+	        "format-paused": "{player_icon} {status_icon}",
+	        "player-icons": {
+		        "default": ""
+	        },
+	        "status-icons": {
+            "playing": "",
+		        "paused": "⏸",
+            "stopped": ""
+	      },
+	      // "ignored-players": ["firefox"]
+      }
 
 }
 
