@@ -26,3 +26,6 @@
 /usr/share/endeavouros/backgrounds/eos_wallpapers_community/krimkerre_4_endy_neon.jpg
 /usr/share/endeavouros/backgrounds/eos_wallpapers_community/krimkerre_2_poly.jpg
 /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/northernlass_endeavour_gallion.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_planet.png
+/usr/share/endeavouros/backgrounds/eos_wallpapers_classic/NEO-JWST.png
