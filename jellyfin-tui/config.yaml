@@ -1,0 +1,11 @@
+servers:
+  - name: mebitek
+    url: https://jellyfin.mebitek.com
+    username: mebitek
+    password_file: /home/mebitek/.jellyfin-tui-password
+
+themes:
+  - name: "mebitek"
+    base: "Dark"
+
+    foreground: "#BF40BF"
