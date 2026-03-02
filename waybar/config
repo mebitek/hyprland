@@ -230,7 +230,6 @@
       "mpris": {
           "player": "jellyfin-tui",
       	  "format": "{player_icon} {status_icon}",
-	        "format-paused": "{player_icon} {status_icon}",
 	        "player-icons": {
 		        "default": ""
 	        },
