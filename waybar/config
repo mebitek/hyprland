@@ -1,245 +1,297 @@
 {
-    "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["custom/wofi", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock", "custom/agenda", "custom/mail", "custom/weather"],
-    "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "backlight", "custom/updates", "idle_inhibitor", "tray", "mpris", "pulseaudio", "custom/monitor", "custom/lenovo", "battery", "custom/logout"],
-    // Modules configuration
-     "hyprland/workspaces": {
-         "on-click": "activate",
-         "format": "{icon}",
-         "format-icons": {
-             "urgent": "",
-             "default": "",
-             "active": ""
-         },
-         "persistent_workspaces": {
-            "1": ["eDP-1"],
-            "2": ["eDP-1"],
-            "3": ["eDP-1"],
-            "4": ["eDP-1"]
-          }
-     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
+  "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/wofi",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/agenda",
+    "custom/mail",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "hyprland/submap",
+    "cpu",
+    "memory",
+    "temperature",
+    "backlight",
+    "custom/updates",
+    "idle_inhibitor",
+    "tray",
+    "mpris",
+    "pulseaudio",
+    "hyprland/language",
+    "custom/monitor",
+    "custom/lenovo",
+    "battery",
+    "custom/logout"
+  ],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "urgent": "",
+      "default": "",
+      "active": ""
     },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
+    "persistent_workspaces": {
+      "1": [
+        "eDP-1"
+      ],
+      "2": [
+        "eDP-1"
+      ],
+      "3": [
+        "eDP-1"
+      ],
+      "4": [
+        "eDP-1"
+      ]
+    }
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/language": {
+    "format": "{short} <span rise='1000'></span>",
+    //"tooltip-format": "{~/.config/hypr/bin/show_binds.sh}",
+    "tooltip": true
+  },
+  "idle_inhibitor": {
+    "format": " <span rise='1000'>{icon}</span>",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
     },
-    "hyprland/language": {
-      "format": "{short} <span rise='1000'></span>",
-      "tooltip-format": "{~/.config/hypr/bin/show_binds.sh}",
-      "tooltip": true
-    },
-    "idle_inhibitor": {
-        "format": " <span rise='1000'>{icon}</span>",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "start-activated": true
-    },
-    "tray": {
-        "icon-size": 24,
-        "spacing": 10
-    },
-    "clock": {
-        "format": "{:L%a, %d %b %R}",
-        "format-alt": "{:L%A, %d %B %Y (%R)}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "timezone": "Europe/Rome",
-        "locale": "it_IT.utf8",
-        "calendar": {
-                    "mode"          : "month",
-                    "mode-mon-col"  : 3,
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#BF40BF'><b>{}</b></span>",
-                              "days":       "<span color='#FFFFFF'><b>{}</b></span>",
-                              "today":      "<span color='#BF40BF'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
-    },
-    "cpu": {
-        "format": "{usage}% <span rise='1000'></span>",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% <span rise='1000'></span>",
-        "on-click": "gksu free_memory.sh"
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C <span rise='1000'>{icon}</span>",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% <span rise='1000'>{icon}</span>",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false
-
-    },
-    "battery": {
-        "states": {
-            "good": 65,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% <span rise='1000'>{icon}</span>",
-        "format-charging": "{capacity}% <span rise='1000'></span>",
-        "format-plugged": "{capacity}% <span rise='1000'></span>",
-        "format-alt": "{time} <span rise='1000'>{icon}</span>",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""],
-        "on-click": "gksu cpupower-gui"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% <span rise='1000'>{icon}</span> {format_source}",
-        "format-bluetooth": "{volume}% <span rise='1000'>{icon}</span> {format_source}",
-        "format-bluetooth-muted": "<span rise='1000'> {icon}</span> {format_source}",
-        "format-muted": "<span rise='1000'></span> {format_source}",
-        "format-source": "{volume}% <span rise='1000'></span>",
-        "format-source-muted": "<span rise='1000'></span>",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "mpd": {
-    	"format": "{stateIcon} ",
-    	"format-disconnected": " ",
-    	"format-stopped": " ",
-	    "state-icons": {
-		    "paused": "",
-		    "playing": "",
-        "stopped": ""
-	    },
-      "on-click": "exec ~/.config/waybar/bin/mpd_control.sh",
-	    "tooltip-format": "{artist}\n{album}\n{title}\n({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-	    "tooltip-format-disconnected": "MPD (disconnected)",
-      "on-click-right": "exec ~/bin/songinfo.sh"
-},
-    "custom/logout": {
-        "format": " <span rise='1000'>{icon}</span>",
-        "on-click": "wlogout",
-        "format-icons": "",
-        "tooltip": false
-      },
-
-    "custom/wofi": {
-        "format": " <span rise='1000'>{icon}</span> ",
-        "on-click": "~/.config/rofi/bin/launcher",
-        "format-icons": "",
-        "tooltip": false
-      },
-    "custom/updates": {
-		    "format": " <span rise='1000'>{icon}</span> ",
-		    "format-icons": ["\uF1B2", "\uF1B2"],
-		    "interval": 10,
-		    "return-type":"json",
-		    "exec": "~/.config/waybar/bin/updbar.sh",
-		    "on-click": "[ -x /usr/bin/fuzzel ] && ~/.config/waybar/bin/chckpds.sh",
-		    "on-click-right": "checkupdates > /tmp/upd_versions ; cat /tmp/upd_versions | wc -l >> /tmp/updates",
-		    "tooltip": true
-	    },
-    "custom/weather": {
-        "format": " {} ",
-        "exec": "python ~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env"
-      },
-    "custom/agenda": {
-        "format": " {} ",
-        "exec": "python ~/.config/waybar/bin/nextcloud_cal.py",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "python ~/.config/waybar/bin/nextcloud_cal.py"
-
-      },
-     "custom/lenovo": {
-        "format": " {} ",
-        "return-type": "json",
-        "exec": "~/.config/waybar/bin/lenovo.sh",
-        "restart-interval": 5,
-        "on-click": "~/bin/lenovo_operation_mode.sh"
-
-      },
-      "custom/mpd": {
-          "format": " {} ",
-          "return-type": "json",
-          "exec": "~/.config/waybar/bin/mpd.sh",
-          "restart-interval": 5,
-          "on-click": "~/.config/waybar/bin/mpd_control.sh"
-          
-        },
-      "custom/mail": {
-          "format": " {} ",
-          "return-type": "json",
-          "exec": "~/.config/waybar/bin/check_mail.sh",
-          "restart-interval": 60,
-          "on-click": "~/.config/waybar/bin/check_mail.sh"
-        },
-      "custom/monitor": {
-          "format": " {} ",
-          "return-type": "json",
-          "exec": "~/.config/waybar/bin/refresh.sh",
-          "restart-interval": 5,
-          "on-click": "~/.config/hypr/bin/set_refresh_rate.sh"
-        },
-
-      "mpris": {
-          "player": "jellyfin-tui",
-      	  "format": "{player_icon} {status_icon}",
-	        "player-icons": {
-		        "default": ""
-	        },
-	        "status-icons": {
-            "playing": "",
-		        "paused": "⏸",
-            "stopped": ""
-	      },
-	      // "ignored-players": ["firefox"]
+    "start-activated": true
+  },
+  "tray": {
+    "icon-size": 24,
+    "spacing": 10
+  },
+  "clock": {
+    "format": "{:L%a, %d %b %R}",
+    "format-alt": "{:L%A, %d %B %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "timezone": "Europe/Rome",
+    "locale": "it_IT.utf8",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#BF40BF'><b>{}</b></span>",
+        "days": "<span color='#FFFFFF'><b>{}</b></span>",
+        "today": "<span color='#BF40BF'><b><u>{}</u></b></span>"
       }
-
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "cpu": {
+    "format": "{usage}% <span rise='1000'></span>",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% <span rise='1000'></span>",
+    "on-click": "gksu free_memory.sh"
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C <span rise='1000'>{icon}</span>",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% <span rise='1000'>{icon}</span>",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "good": 65,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% <span rise='1000'>{icon}</span>",
+    "format-charging": "{capacity}% <span rise='1000'></span>",
+    "format-plugged": "{capacity}% <span rise='1000'></span>",
+    "format-alt": "{time} <span rise='1000'>{icon}</span>",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "on-click": "gksu cpupower-gui"
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% <span rise='1000'>{icon}</span> {format_source}",
+    "format-bluetooth": "{volume}% <span rise='1000'>{icon}</span> {format_source}",
+    "format-bluetooth-muted": "<span rise='1000'> {icon}</span> {format_source}",
+    "format-muted": "<span rise='1000'></span> {format_source}",
+    "format-source": "{volume}% <span rise='1000'></span>",
+    "format-source-muted": "<span rise='1000'></span>",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "mpd": {
+    "format": "{stateIcon} ",
+    "format-disconnected": " ",
+    "format-stopped": " ",
+    "state-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": ""
+    },
+    "on-click": "exec ~/.config/waybar/bin/mpd_control.sh",
+    "tooltip-format": "{artist}\n{album}\n{title}\n({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click-right": "exec ~/bin/songinfo.sh"
+  },
+  "custom/logout": {
+    "format": " <span rise='1000'>{icon}</span>",
+    "on-click": "wlogout",
+    "format-icons": "",
+    "tooltip": false
+  },
+  "custom/wofi": {
+    "format": " <span rise='1000'>{icon}</span> ",
+    "on-click": "~/.config/rofi/bin/launcher",
+    "format-icons": "",
+    "tooltip": false
+  },
+  "custom/updates": {
+    "format": " <span rise='1000'>{icon}</span> ",
+    "format-icons": [
+      "\uF1B2",
+      "\uF1B2"
+    ],
+    "interval": 10,
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/updbar.sh",
+    "on-click": "[ -x /usr/bin/fuzzel ] && ~/.config/waybar/bin/chckpds.sh",
+    "on-click-right": "checkupdates > /tmp/upd_versions ; cat /tmp/upd_versions | wc -l >> /tmp/updates",
+    "tooltip": true
+  },
+  "custom/weather": {
+    "format": " {} ",
+    "exec": "python ~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "~/.config/waybar/bin/weather.py -c ~/.config/waybar/bin/.env"
+  },
+  "custom/agenda": {
+    "format": " {} ",
+    "exec": "python ~/.config/waybar/bin/nextcloud_cal.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "python ~/.config/waybar/bin/nextcloud_cal.py"
+  },
+  "custom/lenovo": {
+    "format": " {} ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/lenovo.sh",
+    "restart-interval": 5,
+    "on-click": "~/bin/lenovo_operation_mode.sh"
+  },
+  "custom/mpd": {
+    "format": " {} ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/mpd.sh",
+    "restart-interval": 5,
+    "on-click": "~/.config/waybar/bin/mpd_control.sh"
+  },
+  "custom/mail": {
+    "format": " {} ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/check_mail.sh",
+    "restart-interval": 60,
+    "on-click": "~/.config/waybar/bin/check_mail.sh"
+  },
+  "custom/monitor": {
+    "format": " {} ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/refresh.sh",
+    "restart-interval": 5,
+    "on-click": "~/.config/hypr/bin/set_refresh_rate.sh"
+  },
+  "mpris": {
+    "player": "jellyfin-tui",
+    "format": "{player_icon} {status_icon}",
+    "player-icons": {
+      "default": ""
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": "⏸",
+      "stopped": ""
+    },
+    // "ignored-players": ["firefox"]
+  }
 }
-

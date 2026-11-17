@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "hyprlock --immediate",
+    "action" : "loginctl lock-session",
     "text" : "Lock",
     "keybind" : "l",
 }
